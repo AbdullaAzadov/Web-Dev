@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Instagram</title>
+        <meta charset="utf-8">
+
+        <style>
+
+            body{
+                background-color: rgb(255, 255, 255);
+            }
+
+            div.main_container{
+                display: flex;
+            }
+
+            div.main_container #logo_field{
+                margin-top: 1%;
+                margin-left: 25%;
+                width: 30%;
+            }
+
+
+            div.main_container .auth_field{
+                margin-top: 2%;
+                width: 360px;
+                border: 2px solid rgb(219, 219, 219);
+            }
+
+
+
+            div.main_container .auth_form{
+                background-color: white;               
+                border-radius: 10%;
+                padding: 4px 48px;
+            }
+
+            input{
+                width: 100%;
+                padding: 12px 8px;
+                margin: 4px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            .sign-button{
+                background-color: rgb(0, 149, 246); 
+                color: white; 
+                cursor: pointer; 
+                border-radius: 8px; 
+                padding: 8px 0px
+            }
+            .sign-button:hover{
+                background-color: rgb(24, 119, 246);
+            }
+
+            .facebook-button{
+                width: 192px;
+                height: 24px;
+                background-color: white; 
+                color: rgb(56, 81, 133); 
+                cursor: pointer; 
+                border: 0px solid #ccc;
+                margin: 16px 10%;
+            }
+
+
+            div.end_field{
+                height: 100%;
+                background-color: white;
+            }
+
+           .text_field{
+                width: 70%;
+                margin-left: 12.5%;
+            }
+            
+            
+        </style>
+
+
+    </head>
+
+
+    <body>
+    
+        <div class="main_container">
+
+
+
+            <div id="logo_field">
+                <div style="position: relative;">
+                    <img src="src/phone.png" alt="Phone-background" height="600" style="position: absolute; top: 0; left: 0; z-index: 2;">
+                   <img src="src/screenshot1.png" alt="screenshot" style="position: absolute; top: 0; left: 0; z-index: 1; margin-left: 120px; margin-top: 30px;" >
+                </div>
+            </div>
+
+
+
+            <div style="display: block;">
+                <div class="auth_field">
+
+                    <img src="src/instagram-logo-with-background.png" alt="Instagram logo" width="100%">
+
+
+                    <div class="auth_form">
+                        <form>
+                            <input type="text" id="email" placeholder="Телефон, имя пользователя или эл. адрес" autofocus="1">
+                            <input type="password" id="password" placeholder="Пароль" autofocus="1">
+                            <input class="sign-button" type="button" value="Войти">
+                        </form>
+
+                            <p style="color: gray;">——————&emsp;или&emsp;——————</p>
+
+                            <button class="facebook-button" type="button"><img src="src/facebook.png"> Войти через Facebook</button>
+                            <a href="https://www.instagram.com/accounts/password/reset/" style="margin-left: 30%; font-size: small; color: rgb(8, 34, 67);">Забыли пароль?</a>
+                    </div>
+                </div>
+
+                <div class="auth_field" style="margin-top: 8x; height: 48px;">
+                    <p style="margin: 16px 40px; font-size: 14px;">У вас ещё нет аккаунта? <a href="https://www.instagram.com/accounts/emailsignup/">Зарегистрироваться</a></p>
+                </div>
+
+                <p style="margin-left: 92px;">Установите приложение.</p>
+                <div style="display: flex; margin-left: 56px;">
+                    <a style="width: 128px;" href="https://l.instagram.com/?u=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.instagram.android%26referrer%3Dig_mid%253D229AC279-27BE-467D-8C66-2C9329B3FA0F%2526utm_campaign%253DloginPage%2526utm_content%253Dlo%2526utm_source%253Dinstagramweb%2526utm_medium%253Dbadge&e=AT30U_6TfgaMAicKIscJ4qeX9ve6NtfMmiamTSOd26FsD90eO73jp4lB_JYyiK9IhtWjmDCr1PUOufW7QQAjgCRTaBIinQsNRi9VZsAfU2epiyp1Mk86NFvPpRKGjPu0wlnRPNh0nQvMl--kxNMNww"><img style="width: 100%;" src="https://static.cdninstagram.com/rsrc.php/v3/yr/r/fDjwyLC88oO.png" alt="google-play"></a>
+                    <a style="width: 128px; height: 38px; margin-bottom: 120px;" href="ms-windows-store://pdp/?productid=9nblggh5l9xt&referrer=appbadge&source=www.instagram.com&mode=mini&pos=0%2C0%2C1920%2C1030"><img style="width: 100%; height: 100%;" src="https://static.cdninstagram.com/rsrc.php/v3/yv/r/_UbeIRgTpG-.png" alt="microsoft-store"></a>
+                </div>
+            </div>
+           
+            
+
+        </div>
+
+        <div class="end_field">
+            <div class="text_field">
+                <p style="padding-top: 32px; color: gray; font-size: 16px;">Meta&emsp;Информация&emsp;Блог&emsp;Вакансии&emsp;Помощь&emsp;API&emsp;Конфиденциальность&emsp;Условия&emsp;Места&emsp;Instagram Lite&emsp;Threads&emsp;Загрузка контактов и лица, не являющиеся пользователями&emsp;Meta Verified</p>
+            </div>
+            <div class="text_field">
+                <p style="padding: 16px 0; color: gray;">Meta © 2024</p>
+        </div>
+
+        
+    </body>
+</html>
