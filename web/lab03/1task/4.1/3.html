@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <script>
+
+    function salarySum(obj){
+        let salary = 0;
+        for(let prop in obj){
+            salary+= obj[prop];
+        }
+        return salary;
+    }
+
+    let salaries = {
+        John: 100,
+        Ann: 160,
+        Pete: 130
+    }
+
+    alert(salarySum(salaries));
+
+
+    </script>
+
+</body>
+
+</html>     

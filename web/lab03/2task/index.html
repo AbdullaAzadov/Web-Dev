@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ToDo List</title>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">    
+    
+    
+    <style>
+
+        .roboto-light {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 24px;
+        }
+        .roboto-regular {
+            font-family: "Roboto", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+        }
+        #_head{
+            background-color: black;
+            width: 100%;
+            height: 64px;
+            padding: 4px 48px;
+        }
+        
+        #_body{
+            width: 100%;
+            height: max-content;
+            padding: 4px 192px;
+        }
+        #input_field{
+            margin-top: 8px;
+            margin-left: 24px;
+            width: 324px;
+            padding: 4px 16px;
+        }
+        #add-button{
+            margin-top: 8px;
+            margin-left: 8px;
+            background-color: rgb(50, 120, 180) ;
+            color: aliceblue;
+            padding: 4px 8px;
+        }
+        #list{
+            height: max-content;
+            margin-left: -32px;
+            padding: 12px;
+        }
+        #list li{
+            list-style: none;
+            display: flex;
+            padding: 16px;
+            width: 512px;
+            border: 1px solid rgba(128, 128, 128, 0.5);
+        }
+        #list li p{
+            word-wrap: break-word;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            width: 448px;
+        }
+        #list li #checkbox{
+            justify-content: center;
+        }
+        #list li #delete{
+            margin-left: auto;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <div id ="_head">
+        <h1 class="roboto-light" style="color: aliceblue;">ToDO List</h1>
+    </div>
+
+    <div id="_body">
+        <h1 class="roboto-regular" style="margin-top: 32px; font-size: 24px;">ToDO List</h1>
+        <input id="input_field" type="text" placeholder="New task..." style="margin-top: 16px;">
+        <button id="add-button" onclick="add_task()">Add</button>
+
+        <ul id="list">
+        </ul>
+
+    </div>
+
+
+    <script>
+
+        function add_task(){
+            let inputElement = document.getElementById("input_field");
+            
+            if(inputElement.value == "") return;
+  
+            let list = document.getElementById("list");
+            let element = document.createElement("li");
+            let text = document.createElement("p");
+            
+            let checkBox = document.createElement("input");
+            checkBox.type = 'checkbox';
+            checkBox.id = 'checkbox';
+
+            let deleteButton = document.createElement("img");
+            deleteButton.src = "src/trash.svg";
+            deleteButton.id = 'delete'
+
+            checkBox.onchange = function(){
+                if(checkBox.checked)
+                    text.style.textDecoration = "line-through";
+                else
+                    text.style.textDecoration = "none";
+            }
+
+            deleteButton.onclick = function(){
+                element.remove();
+            }            
+            
+            text.appendChild(document.createTextNode(inputElement.value));
+            element.append(checkBox);
+            element.append(text);
+            element.append(deleteButton);
+            list.appendChild(element);
+
+
+            inputElement.value = "";
+        }
+
+    </script>
+
+
+</body>
+
+</html>     
