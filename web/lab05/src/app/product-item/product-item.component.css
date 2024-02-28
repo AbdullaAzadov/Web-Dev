@@ -1,0 +1,25 @@
+.item{
+  margin-left: 16px;
+  margin-bottom: 16px;
+}
+
+#like-field{
+  display: flex;
+}
+
+#like-field h4{
+  margin: 0 4px;
+  padding: 0 0;
+}
+
+.like-btn{
+  background-color: #FFFFFF;
+  width: 16px;
+  height: 16px;
+}
+
+.like-btn img{
+  margin-left: -8px;
+  width: 16px;
+  height: 16px;
+}

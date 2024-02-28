@@ -1,0 +1,27 @@
+<app-top-bar></app-top-bar>
+<div class="flexbox">
+  <div class="element" [ngStyle]="{ 'border-color': bckClr1 }">
+    <input class="input_radio" type="radio" id="Phone" name="category" value="Phone" (input)="onOptionChange('Phone')">
+    <label for="Phone">Смартфоны</label>
+  </div>
+
+  <div class="element" [ngStyle]="{ 'border-color': bckClr2 }">
+    <input class="input_radio" type="radio" id="Laptop" name="category" value="Laptop" (input)="onOptionChange('Laptop')">
+    <label for="Laptop">Ноутбуки</label>
+  </div>
+
+  <div class="element" [ngStyle]="{ 'border-color': bckClr3 }">
+    <input class="input_radio" type="radio" id="Pc" name="category" value="Pc" (input)="onOptionChange('Pc')">
+    <label for="Pc">Компьютеры</label>
+  </div>
+
+  <div class="element" [ngStyle]="{ 'border-color': bckClr4 }">
+    <input class="input_radio" type="radio" id="Monitor" name="category" value="Monitor" (input)="onOptionChange('Monitor')">
+    <label for="Monitor">Мониторы</label>
+  </div>
+</div>
+
+
+<div class="container">
+  <app-product-list [targetCategory]="selectedCategory" ></app-product-list>
+</div>

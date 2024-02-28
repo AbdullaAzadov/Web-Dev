@@ -1,0 +1,28 @@
+<div class="item" *ngFor="let product of Product">
+  <h3>
+    <a [href]="product.url" [title]="product.name + ' details'" target="_blank">
+      {{ product.name }}
+    </a>
+  </h3>
+
+  <img [src]="product.image" />
+
+  <div id="like-field">
+    <h4>Rating: {{ product.rating }}/10</h4>
+    <button (click)="product.likePressed = !product.likePressed" class="like-btn">
+      <img *ngIf="!product.likePressed" src="https://www.svgrepo.com/show/67856/like-heart-social-shape-outline.svg">
+      <img *ngIf="product.likePressed" src="https://www.svgrepo.com/show/34978/like.svg">
+      <h4>{{product.likeCount + (product.likePressed)}}</h4>
+    </button>
+  </div>
+
+  <h3>Цена: {{product.price}} тг.</h3>
+
+
+  <p *ngIf="product.description">Описание: {{ product.description }}</p>
+
+  <button type="button" (click)="share(product.url)">
+    Share
+  </button>
+
+</div>
