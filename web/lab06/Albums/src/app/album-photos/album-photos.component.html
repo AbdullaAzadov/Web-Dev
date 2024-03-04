@@ -1,0 +1,14 @@
+<h6 *ngIf="loading">LOADING...</h6>
+
+<div *ngIf="!loading">
+  <div class="photo">
+    <div class="photo-item" *ngFor="let i of currentAlbum">
+      <img [src]="i.thumbnailUrl">
+      <p>{{i.title}}</p>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!loading" class="nav">
+  <button *ngIf="!loading" (click)="returnBack()">Return Back</button>
+</div>

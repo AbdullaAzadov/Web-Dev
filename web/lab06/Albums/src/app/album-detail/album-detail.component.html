@@ -1,0 +1,15 @@
+<div class="album-item">
+  <h5 *ngIf="!loading">Album ID: {{currentAlbum.id}}<br>Album title: {{currentAlbum.title}}</h5>
+  <h5 *ngIf="loading">Loading...</h5>
+
+  <hr>
+  <label for="title-field">Type here to edit album title:</label><br><br>
+  <input id="title-field" placeholder="Title..." [(ngModel)]="title">
+  <button (click)="setTitle()">Save</button>
+
+</div>
+
+<div class="nav">
+  <button (click)="returnBack()">Return Back</button>
+  <a [routerLink]="['photos']">Photos...</a>
+</div>
